@@ -21,13 +21,6 @@
 )
 
 
-== First Slide
-
-#lorem(20)
-
-/ *Term*: Definition
-
-
 #include "sections/01_introduccion.typ"
 #include "sections/02_marco_teorico.typ"
 #include "sections/03_estado_del_arte.typ"
