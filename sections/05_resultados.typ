@@ -14,23 +14,45 @@
 
 == Frontend
 
+#figure(
+  image("../figs/frontend_main.png"),
+  caption: "Pantalla Principal de la Plataforma"
+)
+
 - Navegación evaluada mediante herramientas de accesibilidad para discapacidad visual.
 - *Búsquedas:* por obra, autor, período y técnica. Limitación: coincidencia exacta de strings (incluyendo acentuación).
 - *Placeholders* en todos los inputs facilitan la integración con utilidades de accesibilidad.
 - *Vista de obra:* metadatos generales + contenido de módulos de narración y descripción con audios TTS.
+
+#figure(
+  image("../figs/frontend_obra.png"),
+  caption: "Vista de Obra con Metadatos y Audios"
+)
 - *Ambientes sonoros:* acceso mediante click/selección de 9 cuadrantes.
   - Carencia de etiquetado adecuado que indique la funcionalidad.
   - Mejora pendiente: etiquetado explícito de contenidos e interacción.
 
 == Caso de Estudio: "El Aquelarre" (Goya)
 
-#v(.2cm)
-Obra representativa seleccionada para ilustrar el funcionamiento de los módulos generativos.
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 12pt,
+  [
+    Obra representativa seleccionada para ilustrar el funcionamiento de los módulos generativos.
 
-*Se evaluaron:*
-- Calidad del texto en Audio Descriptivo y Narraciones de Contexto.
-- Fidelidad y realismo del audio ambiental.
-- Naturalidad y claridad de la voz sintetizada (TTS).
+    #v(.3cm)
+    *Se evaluaron:*
+    - Calidad del texto en Audio Descriptivo y Narraciones de Contexto.
+    - Fidelidad y realismo del audio ambiental.
+    - Naturalidad y claridad de la voz sintetizada (TTS).
+  ],
+  [
+    #figure(
+      image("../figs/el_aquelarre_goya.jpeg"),
+      caption: [Obra "El Aquelarre" de Francisco de Goya (1797–1798)]
+    )
+  ]
+)
 
 == Resultados: Audio Descriptivo
 
@@ -61,6 +83,12 @@ Obra representativa seleccionada para ilustrar el funcionamiento de los módulos
 - Calidad de audio: resultados verosímiles en la mayoría de los cuadrantes.
 - Ruido y artefactos variables; outliers donde los ambientes degeneran en ruido.
 - *Conclusión:* limitaciones en la generalización ante elementos visuales ambiguos.
+
+#v(.2cm)
+#figure(
+  image("../figs/frontend_ambiente.png"),
+  caption: "Vista de Ambientes Sonoros — Cuadrantes Interactivos"
+)
 
 *Text-to-Speech (Kokoro 82M):*
 - Naturalidad adecuada para español, entonación fluida y pronunciación clara.

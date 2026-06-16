@@ -29,6 +29,12 @@
 - ORM, arquitectura MVT, ecosistema de paquetes.
 - Autenticación, manejo de rutas y middleware integrados.
 
+#v(.3cm)
+#figure(
+  image("../figs/diagrama_arquitectura.png"),
+  caption: "Arquitectura General del Sistema"
+)
+
 == Módulos del Sistema
 
 La API Gateway orquesta 4 módulos funcionales:
@@ -71,6 +77,42 @@ Cada entrada contiene: autor, título, fecha, técnica, período, elementos visu
 - Salida: Kokoro TTS genera audio narrativo contextual.
 - *Ventaja:* evita alucinaciones usando fuentes autoritativas en lugar de consultas directas al modelo.
 
+#v(.3cm)
+#figure(
+  [
+    ```python
+    DESCRIPTION_PROMPT = \
+    """Describe los elementos retratados en la imagen.
+    - Debe estar en un formato adecuado para narración.
+    - Debe ser conciso y corto en duración.
+    - NO seas redundante.
+    - NO utilices títulos ni subtitulos.
+
+    Elementos retratados: """
+    ```
+  ],
+  caption: "Prompt para Generación de Audio Descriptivo"
+)
+
+#v(.2cm)
+#figure(
+  [
+    ```python
+    SOURCE_SUMMARY_PROMPT = \
+    """Eres un experto en redacción narrativa.
+    Lee el texto y escribe un resumen breve
+    (máx. dos párrafos) en estilo natural y fluido.
+    - Mantén un tono narrativo, claro y atractivo.
+    - Sé conciso: evita repeticiones o rodeos.
+    - Enfócate en los hechos principales y
+      el contexto histórico de la obra.
+    Texto: {TEXT}
+    Tu respuesta: """
+    ```
+  ],
+  caption: "Prompt para Narraciones de Contexto"
+)
+
 == Sonidos Ambientales: Heurística
 
 *Pipeline de 3 pasos:*
@@ -82,6 +124,43 @@ Cada entrada contiene: autor, título, fecha, técnica, período, elementos visu
 3. *Síntesis de audio:* AudioLDM genera sonido para cada elemento. Mezcla multicanal con volúmenes diferenciados:
    - Fondo: −20 dB
    - Primer plano: −5 dB
+
+#v(.3cm)
+#figure(
+  image("../figs/cropped_image_demo.png", height: 85%),
+  caption: "Segmentación por Cuadrantes — \"El Aquelarre\""
+)
+
+#v(.2cm)
+#figure(
+  [
+    ```python
+    EXTRACTOR_PROMPT = \
+    """Extract audio ambience keys from the image.
+    - Output JSON: {"is_background": bool, "object": string}
+    - Only objects with sound relevance, 3 max.
+    - Alive → describe sound (goat bleating, barking).
+    - Output just the required JSON.
+    JSON RESULT:"""
+    ```
+  ],
+  caption: "Prompt para Extracción de Elementos Sonoros"
+)
+
+#v(.1cm)
+El modelo responde con JSON crudo, parseado directamente:
+
+#figure(
+  [
+    ```
+    [
+      {"is_background": false, "object": "goat bleating"},
+      {"is_background": true,  "object": "people whispering"}
+    ]
+    ```
+  ],
+  caption: "Respuesta JSON → `json.loads(response)`"
+)
 
 == Frontend y Limitaciones
 

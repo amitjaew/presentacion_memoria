@@ -38,8 +38,8 @@
   caption: "Estado del Arte en Accesibilidad Artística"
 )
 
-#v(.4cm)
-*Brecha identificada:* las soluciones actuales requieren procesos manuales o semiautomáticos, sin coordinación eficiente entre modalidades. Esto limita la escalabilidad.
+#v(.2cm)
+/ *Brecha identificada*: Las soluciones actuales requieren procesos manuales o semiautomáticos, sin coordinación eficiente entre modalidades. Esto limita la escalabilidad.
 
 == Modelos Multimodales Evaluados
 

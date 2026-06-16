@@ -10,7 +10,11 @@
   - Procesar entradas de voz en flujos conversacionales.
 
 *Modelos representativos del estado del arte:*
-- *Llama V4* (Meta): código abierto, codificación multimodal con MetaCLIP.
+- *Llama V4* (Meta): código abierto. Arquitectura con fusión temprana multimodal:
+  - *Vision Encoder* (MetaCLIP) genera tokens visuales.
+  - *Early Fusion Layer* unifica tokens visuales y textuales antes del procesamiento profundo.
+  - Capas *Transformer* con *iRoPE* aplican atención cruzada bidireccional (texto ↔ imagen).
+  - Disponible vía proveedores cloud: Groq, Novita, TogetherAI.
 - *GPT-4o* (OpenAI): integración nativa texto-imagen-audio.
 - *Gemini 1.5* (Google): procesamiento multimodal unificado.
 
@@ -24,6 +28,13 @@
 - *AudioLDM:* genera audio ambiental mediante difusión latente condicionada por descripciones textuales.
 - Utiliza embeddings CLAP para mejorar la alineación semántica texto-sonido.
 - Pesos abiertos y preentrenados disponibles.
+
+== Arquitectura AudioLDM
+
+#figure(
+  image("../figs/audioldm.png"),
+  caption: "Arquitectura de AudioLDM — Difusión Latente + CLAP"
+)
 
 == Modelos de Texto a Voz (TTS)
 
