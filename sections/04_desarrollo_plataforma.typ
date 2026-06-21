@@ -162,15 +162,15 @@ El modelo responde con JSON crudo, parseado directamente:
   caption: "Respuesta JSON → `json.loads(response)`"
 )
 
-== Frontend y Limitaciones
+== Frontend
 
-*Frontend:*
 - Implementado en NextJS.
 - Textos alternativos y etiquetas HTML descriptivas.
 - Navegación mediante atajos de teclado.
 - Placeholders en todos los inputs para lectores de pantalla.
 
-*Limitaciones del desarrollo:*
+== Limitaciones
+
 - Por restricciones computacionales, los módulos generativos no se integraron directamente en la API Gateway.
 - Se implementó un prototipo funcional en Jupyter para validar el flujo de procesamiento.
 - Los datos fueron preprocesados y luego incorporados a la base de datos.

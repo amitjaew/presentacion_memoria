@@ -9,44 +9,14 @@
   - Traducir elementos visuales en narrativas estructuradas.
   - Procesar entradas de voz en flujos conversacionales.
 
-*Modelos representativos del estado del arte:*
-- *Llama V4* (Meta): código abierto. Arquitectura con fusión temprana multimodal:
-  - *Vision Encoder* (MetaCLIP) genera tokens visuales.
-  - *Early Fusion Layer* unifica tokens visuales y textuales antes del procesamiento profundo.
-  - Capas *Transformer* con *iRoPE* aplican atención cruzada bidireccional (texto ↔ imagen).
-  - Disponible vía proveedores cloud: Groq, Novita, TogetherAI.
-- *GPT-4o* (OpenAI): integración nativa texto-imagen-audio.
-- *Gemini 1.5* (Google): procesamiento multimodal unificado.
+== Modelos Generativos de Audio y TTS
 
-== Modelos Generativos de Audio
-
-- Sistemas que crean sonidos y música a partir de prompts de texto.
+- *Generación de audio:* sistemas que crean sonidos y música a partir de prompts de texto.
 - Basados en arquitecturas de aprendizaje profundo (difusión, transformers).
 - Sintetizan desde sonidos ambientales hasta composiciones musicales.
 
-*Modelo de referencia:*
-- *AudioLDM:* genera audio ambiental mediante difusión latente condicionada por descripciones textuales.
-- Utiliza embeddings CLAP para mejorar la alineación semántica texto-sonido.
-- Pesos abiertos y preentrenados disponibles.
-
-== Arquitectura AudioLDM
-
-#figure(
-  image("../figs/audioldm.png"),
-  caption: "Arquitectura de AudioLDM — Difusión Latente + CLAP"
-)
-
-== Modelos de Texto a Voz (TTS)
-
-- Transforman texto escrito en habla sintética mediante NLP y síntesis de voz.
-- Arquitecturas de referencia:
-  - *Tacotron 2:* encoder-decoder con atención, genera espectrogramas mel autoregresivamente.
-  - *VITS:* síntesis end-to-end con flujos normalizadores y aprendizaje adversarial.
-  - *StyleTTS2:* modela variaciones de prosodia y timbre.
-
-*Implementación seleccionada:*
-- *Kokoro-82M:* voz de alta calidad con solo 82 millones de parámetros.
-- Soporte nativo para español. Basado en StyleTTS2.
+#v(.3cm)
+- *Texto a Voz (TTS):* transforman texto escrito en habla sintética mediante NLP y síntesis de voz.
 
 == Estándares de Accesibilidad
 
@@ -64,15 +34,4 @@
 - Navegación por teclado.
 - Descripciones alternativas y controles auditivos accesibles.
 
-== Convergencia Tecnológica
 
-La plataforma integra estas tres tecnologías en un flujo coherente:
-
-#v(.3cm)
-*Imagen de obra* → *LLM Multimodal* → *Texto descriptivo / narrativo* → *TTS* → *Audio*
-
-#v(.2cm)
-*Prompt textual* → *Modelo generativo de audio* → *Paisaje sonoro*
-
-#v(.2cm)
-*Cliente web WCAG* → *API Gateway* → *Experiencia auditiva accesible*
