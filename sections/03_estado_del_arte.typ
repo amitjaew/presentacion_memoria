@@ -6,10 +6,12 @@
 - Audioguías, maquetas táctiles, textos en braille, recorridos guiados adaptados.
 - Guías oficiales de accesibilidad para museos.
 
+#v(.3cm)
 *Programas institucionales:*
 - Experiencias multimediales MAC (Museo de Arte Contemporáneo, U. de Chile): audioguías, cápsulas subtituladas, lengua de señas.
 - Museo Emilio Caraffa (Argentina): sala accesible con QR, audiodescripciones y paisajes sonoros.
 
+#v(.3cm)
 *Proyectos independientes:*
 - *Audioguiarte:* audioguías personalizadas y recorridos accesibles.
 - *MiméticasLab:* recreación táctil de obras con impresión 3D.
@@ -38,26 +40,25 @@
   caption: "Estado del Arte en Accesibilidad Artística"
 )
 
-#v(.2cm)
+#pagebreak()
 / *Brecha identificada*: Las soluciones actuales requieren procesos manuales o semiautomáticos, sin coordinación eficiente entre modalidades. Esto limita la escalabilidad.
 
 == Modelos Multimodales Evaluados
 
 *Criterios de selección:* pesos abiertos, soporte multimodal nativo, inferencia cloud de bajo costo.
 
+#v(.2cm)
 *Llama V4 (Meta):* código abierto. Arquitectura con fusión temprana multimodal:
 - *Vision Encoder* (MetaCLIP) genera tokens visuales.
 - *Early Fusion Layer* unifica tokens visuales y textuales antes del procesamiento profundo.
 - Capas *Transformer* con *iRoPE* aplican atención cruzada bidireccional (texto ↔ imagen).
 - Disponible vía proveedores cloud: Groq, Novita, TogetherAI.
 
+#v(.2cm)
 *GPT-4o (OpenAI):* integración nativa texto-imagen-audio. Sin pesos liberados.
 
+#v(.2cm)
 *Gemini 1.5 (Google):* procesamiento multimodal unificado. Sin pesos liberados.
-
-*DeepSeek-OCR:* código abierto, especializado en OCR y documentos visuales.
-
-Llama V4 combina los tres factores requeridos simultáneamente.
 
 == Modelos de Audio y Voz Evaluados
 
@@ -67,14 +68,13 @@ Llama V4 combina los tres factores requeridos simultáneamente.
 - *StyleTTS2:* modela variaciones de prosodia y timbre.
 - *Kokoro-82M:* seleccionado. 82M parámetros, 3 voces en español, alta calidad. Soporte nativo para español. Basado en StyleTTS2.
 
+#v(.3cm)
 *Generación de audio ambiental:*
 - *AudioLDM:* seleccionado. Genera audio ambiental mediante difusión latente condicionada por descripciones textuales. Utiliza embeddings CLAP para mejorar la alineación semántica texto-sonido. Pesos abiertos y preentrenados disponibles.
 - *I Hear Your True Colors:* VQVAE + transformers + CLIP. Sin pesos públicos.
 
-#v(.3cm)
+#pagebreak()
 #figure(
-  image("../figs/audioldm.png"),
+  image("../figs/audioldm.png", height: 90%),
   caption: "Arquitectura de AudioLDM — Difusión Latente + CLAP"
 )
-
-*Estado de la generación de audio ambiental:* aún en fase experimental, sin soluciones comerciales consolidadas.

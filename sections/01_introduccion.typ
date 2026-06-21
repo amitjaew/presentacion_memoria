@@ -3,22 +3,28 @@
 == Contexto y Problema
 
 - El acceso equitativo al arte es un componente esencial del desarrollo cultural y social.
+#v(.2cm)
 - Las personas con discapacidad visual enfrentan barreras significativas para disfrutar obras visuales en condiciones comparables al resto del público.
+#v(.2cm)
 - Las soluciones de accesibilidad convencionales (texto alternativo, audioguías manuales, maquetas táctiles) no logran traducir la experiencia estética completa:
   - Composición, color, textura y simbolismo.
 
 == Oportunidad Tecnológica
 
 - La inteligencia artificial emerge como una oportunidad para reimaginar la transmisión de contenido artístico.
+#v(.2cm)
 - Los modelos multimodales de lenguaje interpretan el contenido de una obra con profundidad semántica:
   - Identifican elementos, estilos, emociones y simbolismos.
+#v(.2cm)
 - Los modelos generativos de audio transforman interpretaciones en experiencias sonoras inmersivas.
+#v(.2cm)
 - Esta convergencia habilita una mediación artística automatizada y escalable.
 
 == Solución Propuesta
 
 Este proyecto desarrolla una alternativa de accesibilidad para consumo de contenido artístico orientado a personas con discapacidad visual.
 
+#v(1cm)
 *Pipeline integrada de producción de piezas de audio:*
 - Modelos de lenguaje multimodales para interpretación de obras.
 - Sistemas de síntesis de voz (TTS) para narración.

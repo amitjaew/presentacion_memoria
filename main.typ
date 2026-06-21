@@ -20,6 +20,7 @@
   toc: true,
 )
 
+#set align(horizon)
 
 #include "sections/01_introduccion.typ"
 #include "sections/02_marco_teorico.typ"
