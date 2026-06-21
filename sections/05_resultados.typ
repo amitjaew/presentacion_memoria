@@ -21,21 +21,19 @@
 )
 
 #pagebreak()
+#figure(
+  image("../figs/frontend_obra.png", height: 90%),
+  caption: "Vista de Obra con Metadatos y Audios"
+)
+
+/*
 - *Búsquedas:* por obra, autor, período y técnica. #v(.2cm)
   - *Limitación:* coincidencia exacta de strings (incluyendo acentuación).
 #v(.2cm)
 - *Placeholders* en todos los inputs facilitan la integración con utilidades de accesibilidad.
 #v(.2cm)
 - *Vista de obra:* metadatos generales + contenido de módulos de narración y descripción con audios TTS.
-
-#figure(
-  image("../figs/frontend_obra.png", height: 90%),
-  caption: "Vista de Obra con Metadatos y Audios"
-)
-- *Ambientes sonoros:* acceso mediante click/selección de 9 cuadrantes.
-  - Carencia de etiquetado adecuado que indique la funcionalidad.
-  - Mejora pendiente: etiquetado explícito de contenidos e interacción.
-
+*/
 == Caso de Estudio: "El Aquelarre" (Goya)
 
 #grid(

@@ -28,4 +28,4 @@
 #include "sections/04_desarrollo_plataforma.typ"
 #include "sections/05_resultados.typ"
 #include "sections/06_conclusion.typ"
-#include "sections/07_bibliografia.typ"
+= Preguntas
