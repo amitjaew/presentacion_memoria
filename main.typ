@@ -1,4 +1,4 @@
-#import "@preview/diatypst:0.9.3": *
+#import "diatypst_lib.typ": *
 
 #show: slides.with(
   title: [
