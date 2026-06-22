@@ -18,6 +18,8 @@
   layout: "medium",
   title-color: blue.darken(60%),
   toc: true,
+  footer-title: "Defensa de Memoria",
+  footer-subtitle: "Alexey Nikolay Mitjaew Hupat"
 )
 
 #set align(horizon)
