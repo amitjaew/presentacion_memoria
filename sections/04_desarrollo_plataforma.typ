@@ -76,11 +76,16 @@ Esta separación permite integrar servicios externos y soluciones autoalojadas e
 
 #v(.5cm)
 *Entidades del modelo de datos:*
-- *Artwork:* entidad central (título, fecha, contexto histórico).
-- *Author, Technique, Style:* metadatos referenciales (relación 1–N con Artwork).
+- *Artwork* entidad central (título, fecha, contexto histórico).
+- *Author, Technique, Style:* metadatos referenciales.
 - *ArtworkDescription:* descripciones textuales del contenido visual.
 - *ArtworkNarration:* fragmentos narrativos y contextuales.
 - *ArtworkAmbience:* elementos de ambientación con coordenadas (x, y).
+
+#figure(
+  image("../figs/datamodel.png", height: 90%),
+  caption: "Modelo de Datos de la Plataforma"
+) <uml-modelo-datos>
 
 == Módulos de Generación
 
