@@ -51,7 +51,7 @@
 *Llama V4 (Meta):* código abierto. Arquitectura con fusión temprana multimodal:
 - *Vision Encoder* (MetaCLIP) genera tokens visuales.
 - *Early Fusion Layer* unifica tokens visuales y textuales antes del procesamiento profundo.
-- Capas *Transformer* con *iRoPE* aplican atención cruzada bidireccional (texto ↔ imagen).
+- Capas *Transformer* aplican atención cruzada bidireccional (texto ↔ imagen).
 - Disponible vía proveedores cloud: Groq, Novita, TogetherAI.
 
 #v(.2cm)
@@ -70,8 +70,8 @@
 
 #v(.3cm)
 *Generación de audio ambiental:*
-- *AudioLDM:* seleccionado. Genera audio ambiental mediante difusión latente condicionada por descripciones textuales. Utiliza embeddings CLAP para mejorar la alineación semántica texto-sonido. Pesos abiertos y preentrenados disponibles.
 - *I Hear Your True Colors:* VQVAE + transformers + CLIP. Sin pesos públicos.
+- *AudioLDM:* seleccionado. Genera audio ambiental mediante difusión latente condicionada por descripciones textuales. Utiliza embeddings CLAP para mejorar la alineación semántica texto-sonido. Pesos abiertos y preentrenados disponibles.
 
 #pagebreak()
 #figure(

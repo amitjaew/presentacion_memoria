@@ -70,7 +70,7 @@ Esta separación permite integrar servicios externos y soluciones autoalojadas e
     [autor], [título], [fecha],
     [técnica], [período], [elementos visuales],
     table.hline(stroke: 0.4pt),
-    [contexto histórico], [enlace a Wikipedia], [imagen],
+    [contexto histórico], [enlace a Wikipedia], [enlace a imagen],
   )))
 }
 
